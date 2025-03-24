@@ -53,7 +53,7 @@
         
         
         h1 {
-            color: #c10510;
+            color: #BA3B46;
             font-size: 2.5rem;
             margin-bottom: 15px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -639,8 +639,8 @@
                 </div>
             </div>
             <div class="controls">
-                <button class="btn btn-secondary btn-back" onclick="backToMenu()">Indietro</button>
                 <button class="btn btn-next" onclick="nextFlashcard()">Prossima Parola</button>
+                <button class="btn btn-secondary btn-back" onclick="backToMenu()">Indietro</button>
             </div>
         </div>
         
@@ -654,8 +654,9 @@
                 <div class="option" onclick="checkAnswer(this, 3)">До свидания</div>
             </div>
             <div class="controls">
+                 <button class="btn btn-next" id="mc-next" onclick="nextQuestion()" disabled>Prossima Domanda</button>
                 <button class="btn btn-secondary btn-back" onclick="backToMenu()">Indietro</button>
-                <button class="btn btn-next" id="mc-next" onclick="nextQuestion()" disabled>Prossima Domanda</button>
+               
             </div>
         </div>
         
@@ -669,8 +670,9 @@
                 <div class="option" onclick="checkAnswer(this, 3)">Arrivederci</div>
             </div>
             <div class="controls">
-                <button class="btn btn-secondary btn-back" onclick="backToMenu()">Indietro</button>
                 <button class="btn btn-next" id="ai-next" onclick="nextQuestion()" disabled>Prossima Domanda</button>
+                <button class="btn btn-secondary btn-back" onclick="backToMenu()">Indietro</button>
+                
             </div>
         </div>
         
@@ -684,8 +686,9 @@
                 <div class="option" onclick="checkAnswer(this, 3)">До свидания</div>
             </div>
             <div class="controls">
-                <button class="btn btn-secondary btn-back" onclick="backToMenu()">Indietro</button>
                 <button class="btn btn-next" id="ar-next" onclick="nextQuestion()" disabled>Prossima Domanda</button>
+                <button class="btn btn-secondary btn-back" onclick="backToMenu()">Indietro</button>
+                
             </div>
         </div>
     </div>
