@@ -82,7 +82,18 @@
             position: relative;
         }
         
-     
+        header::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            top: -20px;
+            right: 20px;
+            opacity: 0.3;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
         
         h1 {
             color: white;
@@ -91,8 +102,6 @@
             text-shadow: 0 5px 10px rgba(0,0,0,0.4);
             position: relative;
         }
-        
-        
         
         h2 {
             color: var(--light-color);
@@ -126,8 +135,6 @@
             min-height: 220px;
             position: relative;
             overflow: hidden;
-            transform-style: preserve-3d;
-            perspective: 1000px;
         }
         
         .menu-item::before {
@@ -144,7 +151,7 @@
         }
         
         .menu-item:hover {
-            transform: translateY(-10px) rotateX(5deg);
+            transform: translateY(-10px);
             box-shadow: var(--card-shadow-hover);
         }
         
@@ -182,27 +189,18 @@
             transform: scale(1.2);
         }
         
-        .menu-item:nth-child(1) {
-            transform: rotate(-1deg);
-        }
-        
-        .menu-item:nth-child(2) {
-            transform: rotate(1deg);
-        }
-        
-        .menu-item:nth-child(3) {
-            transform: rotate(-0.5deg);
-        }
-        
+        .menu-item:nth-child(1),
+        .menu-item:nth-child(2),
+        .menu-item:nth-child(3),
         .menu-item:nth-child(4) {
-            transform: rotate(0.5deg);
+            transform: none;
         }
         
         .menu-item:nth-child(1):hover,
         .menu-item:nth-child(2):hover,
         .menu-item:nth-child(3):hover,
         .menu-item:nth-child(4):hover {
-            transform: translateY(-10px) rotateX(5deg);
+            transform: translateY(-10px);
         }
         
         .screen {
@@ -286,6 +284,7 @@
             background-color: var(--primary-light);
             color: white;
             position: relative;
+            transform: rotateY(0deg);
         }
         
         .flashcard-front::before {
@@ -707,8 +706,11 @@
 </head>
 <body>
     <header>
-        <h1>Impara le 1000 Parole Russe Più Utilizzate</h1>
-        <h2>Migliora il tuo vocabolario con 4 modalità di apprendimento</h2>
+
+        <br>
+        <br>
+        <h1>Russian 1000</h1>
+        
     </header>
     
     <div class="container">
